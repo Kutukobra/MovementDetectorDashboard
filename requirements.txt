@@ -1,0 +1,5 @@
+dash
+plotly
+paho-mqtt
+pandas
+dash_bootstrap_components
