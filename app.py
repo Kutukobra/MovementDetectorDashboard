@@ -120,7 +120,7 @@ def send_to_esp(n, start_h, start_m, end_h, end_m):
     if start_h is None or end_h is None:
         return "Please select valid times."
 
-    payload = f"{start_h * 60 + start_m} {end_h * 60 + end_m}"
+    payload = f"{start_h * 60 + start_m}-{end_h * 60 + end_m}"
     try:
         pub_client.publish(TOPIC_TIME, payload)
         logging.info(f"Published data: {payload}")
